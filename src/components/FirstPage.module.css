@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,700;6..12,800&display=swap');
+
+.first-page {
+    background: url('../images/cream3.jpg'), url('../images/woman-skin.jpg');
+    background-position: top left, top right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 50%, 50%;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    margin-left: 270px;
+    margin-right: 270px;
+}
+
+.left-wrapper {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.75rem;
+    width: 50%;
+    padding-top: 0px;
+}
+
+.word {
+    background: #D97E7E;
+    padding: 0px 10px 0px 10px;
+    display: inline-block;
+    border-radius: 30px;
+    margin: 2px 2px 2px 0;
+}
