@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,700;6..12,800&display=swap');
+
+.button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.line {
+    height: 3px;
+        background-color: #D97E7E;
+}
+
+@media only screen and (max-width: 576px) {}
+@media only screen and (min-width: 576px) {}
+
+@media only screen and (min-width: 768px) {
+    .button {
+        font-size: 1.25rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .button {
+        font-size: 1.5rem;
+    }
+
+}
