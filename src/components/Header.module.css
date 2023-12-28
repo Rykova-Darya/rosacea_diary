@@ -1,49 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,700;6..12,800&display=swap');
 
-.canvas {
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 700;
-    height: 100px;
-}
-
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    align-items: center;
-    padding-top: 80px;
+    padding-top: 30px;
 }
 
-@media only screen and (max-width: 576px) {
-    .canvas {
+.canvas {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    height: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .logo_desktop {
         display: none;
     }
-    
-    .header {
-        display: none;
+
+
+
+    .logo_mobile {
+        display: inline-block;
     }
 }
 
-@media only screen and (min-width: 576px) {
-    .canvas {
-        display: none;
-    }
-    
-    .header {
-        display: none;
-    }
-}
+/* @media only screen and (min-width: 576px) {
+
+} */
 
 @media only screen and (min-width: 768px) {
-    .canvas {
-        display: block;
-        margin-left: 80px;
-        margin-right: 80px;
+    .logo_mobile {
+        display: none;
     }
-    
-    .header {
-        display: flex;
+
+    .logo_desktop {
+        display: inline-block;
     }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -53,23 +52,11 @@
     }
 }
 
-@media only screen and (min-width: 992px) {
-    .canvas {
-        margin-left: 120px;
-        margin-right: 120px;
-    }
-}
+/* @media only screen and (min-width: 992px) {
+} */
 
-@media only screen and (min-width: 1200px) {
-    .canvas {
-        margin-left: 170px;
-        margin-right: 170px;
-    }
-}
+/* @media only screen and (min-width: 1200px) {
+} */
 
-@media only screen and (min-width: 1400px) {
-    .canvas {
-        margin-left: 270px;
-        margin-right: 270px;
-    }
-}
+/* @media only screen and (min-width: 1400px) {
+} */
