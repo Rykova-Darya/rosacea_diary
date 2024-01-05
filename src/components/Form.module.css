@@ -91,3 +91,13 @@ input:focus {
 .error-input {
     border-color: #FF6868;
 }
+
+.psw-container {
+    position: relative;
+}
+
+.btn-pass {
+    position: absolute;
+    right: 3%;
+    bottom: 2%;
+}

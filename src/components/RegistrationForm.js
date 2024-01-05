@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import styles from "./Form.module.css";
+import BtnHideShowPass from "./UX/BtnHideShowPass";
 
 const RegistrationForm = (props) => {
   const [emailPlaceholder, setEmailPlaceholder] = useState(
@@ -12,6 +13,15 @@ const RegistrationForm = (props) => {
     useState("Повторите пароль");
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showNewPassword, setShowNewPassword] = useState(false);
+  const showPasswordHandler = () => {
+    setShowPassword((prevState) => !prevState);
+  };
+
+  const showNewPasswordHandler = () => {
+    setShowNewPassword((prevState) => !prevState);
+  };
 
   const handleFocus = (field) => {
     if (field === "email") {
@@ -141,20 +151,23 @@ const RegistrationForm = (props) => {
 
             <div className={styles["label-container"]}>
               <label htmlFor="password">Пароль:</label>
-              <Field
-                type="password"
-                id="password"
-                name="password"
-                placeholder={passwordPlaceholder}
-                onFocus={() => handleFocus("password")}
-                onBlur={(e) => handleBlur("password", e.target.value)}
-                autoComplete="new-password"
-                className={
-                  touched.password && errors.password
-                    ? styles["error-input"]
-                    : ""
-                }
-              />
+              <div className={styles["psw-container"]}>
+                <Field
+                  type={showPassword ? "text" : "password"}
+                  id="password"
+                  name="password"
+                  placeholder={passwordPlaceholder}
+                  onFocus={() => handleFocus("password")}
+                  onBlur={(e) => handleBlur("password", e.target.value)}
+                  autoComplete="new-password"
+                  className={
+                    touched.password && errors.password
+                      ? styles["error-input"]
+                      : ""
+                  }
+                />
+                <BtnHideShowPass showPasswordHandler={showPasswordHandler} />
+              </div>
               <ErrorMessage
                 className={classPasswordError}
                 name="password"
@@ -164,20 +177,23 @@ const RegistrationForm = (props) => {
 
             <div className={styles["label-container"]}>
               <label htmlFor="password">Повторите пароль:</label>
-              <Field
-                type="password"
-                id="newPassword"
-                name="newPassword"
-                placeholder={newPasswordPlaceholder}
-                onFocus={() => handleFocus("newPassword")}
-                onBlur={(e) => handleBlur("newPassword", e.target.value)}
-                autoComplete="new-password"
-                className={
-                  touched.newPassword && errors.newPassword
-                    ? styles["error-input"]
-                    : ""
-                }
-              />
+              <div className={styles["psw-container"]}>
+                <Field
+                  type={showNewPassword ? "text" : "password"}
+                  id="newPassword"
+                  name="newPassword"
+                  placeholder={newPasswordPlaceholder}
+                  onFocus={() => handleFocus("newPassword")}
+                  onBlur={(e) => handleBlur("newPassword", e.target.value)}
+                  autoComplete="new-password"
+                  className={
+                    touched.newPassword && errors.newPassword
+                      ? styles["error-input"]
+                      : ""
+                  }
+                />
+                <BtnHideShowPass showPasswordHandler={showNewPasswordHandler} />
+              </div>
               <ErrorMessage
                 className={classPasswordError}
                 name="newPassword"
@@ -185,7 +201,11 @@ const RegistrationForm = (props) => {
               />
             </div>
             <div className={styles["btn-container"]}>
-              <input className={styles.btn} type="submit" value="Войти"></input>
+              <input
+                className={styles.btn}
+                type="submit"
+                value="Зарегистрироваться"
+              ></input>
             </div>
           </Form>
         )}

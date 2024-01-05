@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import styles from "./Form.module.css";
+import BtnHideShowPass from "./UX/BtnHideShowPass";
 
 const RegistrationForm = () => {
   const [emailPlaceholder, setEmailPlaceholder] = useState(
@@ -11,6 +12,11 @@ const RegistrationForm = () => {
 
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
+  const [showNewPassword, setShowNewPassword] = useState(false);
+
+  const showNewPasswordHandler = () => {
+    setShowNewPassword((prevState) => !prevState);
+  };
 
   const handleFocus = (field) => {
     if (field === "email") {
@@ -82,8 +88,6 @@ const RegistrationForm = () => {
     return errors;
   };
 
-  console.log({ ddd: "ddd" });
-
   let classEmailError = emailError ? `${styles["error-message"]}` : "";
   let classPasswordError = passwordError ? `${styles["error-message"]}` : "";
 
@@ -122,20 +126,23 @@ const RegistrationForm = () => {
 
             <div className={styles["label-container"]}>
               <label htmlFor="password">Пароль:</label>
-              <Field
-                type="password"
-                id="password"
-                name="password"
-                placeholder={passwordPlaceholder}
-                onFocus={() => handleFocus("password")}
-                onBlur={(e) => handleBlur("password", e.target.value)}
-                autoComplete="new-password"
-                className={
-                  touched.password && errors.password
-                    ? styles["error-input"]
-                    : ""
-                }
-              />
+              <div className={styles["psw-container"]}>
+                <Field
+                  type={showNewPassword ? "text" : "password"}
+                  id="password"
+                  name="password"
+                  placeholder={passwordPlaceholder}
+                  onFocus={() => handleFocus("password")}
+                  onBlur={(e) => handleBlur("password", e.target.value)}
+                  autoComplete="new-password"
+                  className={
+                    touched.password && errors.password
+                      ? styles["error-input"]
+                      : ""
+                  }
+                />
+                <BtnHideShowPass showPasswordHandler={showNewPasswordHandler} />
+              </div>
               <ErrorMessage
                 className={classPasswordError}
                 name="password"
