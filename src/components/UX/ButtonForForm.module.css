@@ -1,8 +1,21 @@
-.btn {
+/* .btn {
 	color: #A66A5D;
 	font-family: 'Nunito Sans', sans-serif;
 	font-weight: 400;
 	font-size: 1.25rem;
+	margin-top: 1%;
+}
+
+.btn:hover,
+.btn:active {
+	text-decoration: underline;
+} */
+
+.btn {
+	color: #A66A5D;
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1.1rem;
 	margin-top: 1%;
 }
 

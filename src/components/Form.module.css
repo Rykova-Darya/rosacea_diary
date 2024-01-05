@@ -1,34 +1,39 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,700;6..12,800&display=swap');
 
 h1 {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 800;
     color: #260101;
-    font-size: 40px;
+    font-size: 1.75rem;
     padding-top: 10%;
     text-align: center;
 }
 
-form, label {
+form,
+label {
     display: flex;
     flex-direction: column;
 
 }
 
 form {
-    align-items: center;
+    /* align-items: center; */
+    margin-left: 4%;
+    margin-right: 4%;
     margin-top: 2%;
 }
 
 .label-container {
-    margin-bottom: 1%;
+    margin-bottom: 2%;
 }
 
 label {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 400;
     color: #260101;
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-bottom: 1%;
 }
 
@@ -36,45 +41,48 @@ input {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 400;
     color: #260101;
-    width: 376px;
-    height: 50px;
-    border-radius: 20px;
-    border: 2px solid #260101;
-    padding-left: 24px;
+    /* width: 376px; */
+    width: 97%;
+    height: 2.25rem;
+    /* height: 7.95vh; */
+    /* border-radius: 20px; */
+    border-radius: 0.625rem;
+    border: 0.125rem solid #260101;
+    padding-left: 2%;
 }
 
 input::placeholder {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 200;
     color: #CCACA6;
-    font-size: 1.25rem;
-    /* padding-left: 24px; */
+    /* font-size: 1.25rem; */
 }
 
 input:focus {
     border: none;
 }
+
 .btn-container {
+    /* width: 100%; */
     margin-top: 2%;
+    /* height: 8vh; */
 }
+
 .btn {
-    width: 400px;
+    width: 100%;
+    height: 2.5rem;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 800;
     color: #F3EFEF;
-    font-size: 1.25rem;
-    padding-left: 24px;
+    font-size: 1.15rem;
+    padding-left: 2%;
     background-color: #A66A5D;
     border-color: #A66A5D;
 
 }
 
-/* .btn:hover {
-    background-color: #E1A0A0;
-    border-color: #E1A0A0;
-} */
-
-.btn:hover, .btn:active {
+.btn:hover,
+.btn:active {
     background-color: #D97E7E;
     border-color: #D97E7E;
 }
@@ -83,7 +91,7 @@ input:focus {
     color: #FF6868;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 400;
-    padding-left: 4px;
+    padding-left: 0.25rem;
     font-size: 0.625rem;
     padding-top: 1%;
 }
@@ -96,8 +104,70 @@ input:focus {
     position: relative;
 }
 
-.btn-pass {
+/* .btn-pass {
     position: absolute;
     right: 3%;
     bottom: 2%;
+} */
+
+@media only screen and (min-width: 576px) {
+    form {
+            align-items: center;
+            margin-top: 2%;
+        }
+    
+    input {
+        width: 23.5rem;
+        height: 2.25rem;
+        padding-left: 1.5rem;
+    }
+
+    .btn {
+        width: 25rem;
+        height: 2.55rem;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 800;
+        color: #F3EFEF;
+        font-size: 1.15rem;
+        /* padding-left: 2%; */
+        background-color: #A66A5D;
+        border-color: #A66A5D;
+
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+h1 {
+    font-size: 2.5rem;
+    padding-top: 10%;
+    text-align: center;
+}
+
+form, label {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.label-container {
+    margin-bottom: 1%;
+}
+
+label {
+    font-size: 1.25rem;
+}
+
+input::placeholder {
+    font-size: 1.25rem;
+}
+
+input {
+height: 2.5rem;
+}
+
+.btn {
+    height: 2.75rem;
+    font-size: 1.25rem;
+}
 }

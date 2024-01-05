@@ -21,9 +21,7 @@ const ModalLogin = (props) => {
   const Modal = (
     <Fragment>
       <div className={styles.wrapper}>
-        <div className={styles["left-space"]} onClick={props.onHideModal}>
-          Прозрачный див
-        </div>
+        <div className={styles["left-space"]} onClick={props.onHideModal}></div>
         <div className={styles["right-space"]}>
           <button onClick={props.onHideModal} className={styles["btn-delete"]}>
             <img src={DeleteIcon} alt="Кнопка закрыть модальное окно" />
