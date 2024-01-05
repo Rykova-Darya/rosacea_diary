@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "../components/Form.module";
+import styles from "../components/Form.module.css";
 
 const useInput = (registrationForm, FormLogin) => {
   const [emailPlaceholder, setEmailPlaceholder] = useState(
