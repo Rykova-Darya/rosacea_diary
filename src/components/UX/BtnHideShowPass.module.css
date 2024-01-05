@@ -1,0 +1,17 @@
+.state-pass {
+	width: 55%;
+}
+
+.psw-container {
+	position: relative;
+}
+
+.btn-pass {
+	position: absolute;
+	right: 0%;
+	bottom: 0%;
+}
+
+.btn-pass:focus-visible {
+	outline: none;
+}

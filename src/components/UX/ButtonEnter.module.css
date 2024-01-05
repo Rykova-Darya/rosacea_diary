@@ -8,6 +8,7 @@
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 800;
     font-size: 1.5rem;
+    color: #0C0C0D;
 }
 
 .line {
@@ -15,18 +16,23 @@
         background-color: #D97E7E;
 }
 
-@media only screen and (max-width: 576px) {}
-@media only screen and (min-width: 576px) {}
+.button-container:hover .line {
+    background-color: #0C0C0D;
+}
 
-@media only screen and (min-width: 768px) {
+.button-container:hover .button {
+    color: #D97E7E;
+}
+
+/* @media only screen and (max-width: 576px) {}
+@media only screen and (min-width: 576px) {} */
+
+@media only screen and (max-width: 768px) {
     .button {
         font-size: 1.25rem;
     }
 }
 
-@media only screen and (min-width: 992px) {
-    .button {
-        font-size: 1.5rem;
-    }
+/* @media only screen and (min-width: 992px) {
 
-}
+} */
